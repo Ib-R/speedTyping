@@ -26,7 +26,19 @@ const words = [
     'Word',
     'Awesomeness',
     'Sick',
-    'Physics'
+    'Physics',
+    'Access',
+    'Password',
+    'Aurora',
+    'Behold',
+    'Blade',
+    'Farewell',
+    'Grid',
+    'Niveous',
+    'Nymph',
+    'Shore',
+    'Shade',
+    'Youngling'
 ]
 
 window.addEventListener('load', loadWord(words))
