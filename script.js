@@ -49,6 +49,7 @@ wordInput.addEventListener('keydown', match)
 function start() {
     if(firstPress === 0){
         startAud.play()
+        beanImg.src= "media/impressed.png"
         msg.innerHTML = ""
         wordInput.value = ""
         isPlaying = true
