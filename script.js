@@ -15,6 +15,7 @@ const highscore = document.getElementById('highscore')
 const msg = document.getElementById('msg')
 const startAud = document.getElementById('startAud')
 const endAud = document.getElementById('endAud')
+const beanImg = document.getElementById('bean')
 
 
 const words = [
@@ -102,9 +103,11 @@ function reset() {
     wordInput.blur()
     wordInput.value = ""
     if(score > highscore.innerHTML){
+        beanImg.src = 'media/thumbs-up.png'
         highscore.innerHTML = score
         score = 0
     }else{
+        beanImg.src = 'media/sad.png'
         score = 0
     }
 }
