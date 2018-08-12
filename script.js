@@ -1,6 +1,6 @@
 // Globals
 let isPlaying
-let time = 10
+let time = 60
 let score = 0
 let currentWord
 let firstPress = 0
@@ -86,7 +86,7 @@ function reset() {
     isPlaying = false
     scoreOutput.innerHTML = score
     firstPress = 0
-    time = 10
+    time = 60
     wordInput.blur()
     wordInput.value = ""
     if(score > highscore.innerHTML){
