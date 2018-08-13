@@ -1,6 +1,6 @@
 // Globals
 let isPlaying
-let time = 60
+let time = 10
 let score = 0
 let currentWord
 let firstPress = 0
@@ -17,37 +17,12 @@ const startAud = document.getElementById('startAud')
 const endAud = document.getElementById('endAud')
 const beanImg = document.getElementById('bean')
 
-
-const words = [
-    'Great',
-    'What',
-    'Yes',
-    'Amazing',
-    'Significant',
-    'Word',
-    'Awesomeness',
-    'Sick',
-    'Physics',
-    'Access',
-    'Password',
-    'Aurora',
-    'Behold',
-    'Blade',
-    'Farewell',
-    'Grid',
-    'Niveous',
-    'Nymph',
-    'Shore',
-    'Shade',
-    'Youngling'
-]
-
 window.addEventListener('load', loadWord(words))
 window.onkeypress = (e)=>{if(e.keyCode === 13){start()}}
 wordInput.addEventListener('keydown', match)
 
 function start() {
-    if(firstPress === 0){
+    if(firstPress === 0 && document.activeElement === wordInput){
         startAud.play()
         beanImg.src= "media/impressed.png"
         msg.innerHTML = ""
@@ -78,7 +53,7 @@ function countDown() {
         }else {
             endAud.play()
             clearInterval(interval)
-            msg.innerHTML = 'Game Over!'
+            msg.innerHTML = 'Game Over! </br>Press Enter to Start Again'
             reset()
         }
     },1000)
